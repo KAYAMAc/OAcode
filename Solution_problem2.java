@@ -1,3 +1,13 @@
+/*
+题目描述:
+将JST标准的日期转换为UTC日期后,找到过去最近的weekday和未来最近的weekday
+输入：第一行整数n,后面n行每行一个日期 yyyy-MM-dd HH:mm:ss
+输出：一共n行,每行包括一两个日期,以斜线隔开
+例:
+1
+2010-10-10 10:10:10
+2010-10-05/2010-10-15
+*/
 package Solutions;
 
 import java.text.ParseException;
@@ -48,7 +58,7 @@ public class Solution_problem2 {
         for(int x=0;x<input_number;x++) {
         	String input_date=input.nextLine();
 			if(input_date==""){
-				System.out.println("�ո����������Ƥ���������: yyyy-MM-dd HH:mm:ss");
+				System.out.println("晩原を秘薦してください。: yyyy-MM-dd HH:mm:ss");
 				input_number++;
 			}
 			else {
@@ -58,7 +68,7 @@ public class Solution_problem2 {
 				}
 				catch (Exception e) {
 					input_number++;
-					System.out.println("�������ո����������Ƥ���������: yyyy-MM-dd HH:mm:ss");
+					System.out.println("屎しい晩原を秘薦してください。: yyyy-MM-dd HH:mm:ss");
 				}
 			}
         }
