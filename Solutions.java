@@ -1,3 +1,9 @@
+/*
+题目描述:
+将输入的字符串转换为id的组合,若字符之前出现过,则在出现过的id基础上加100,若当前字符第一次出现,则该字符的id为00x,第一个数字为001,第二个数字为002
+输入：第一行整数n,后面n行每行一列字符,字符间以空格隔开
+输出：一共n行,每行包括一列id,id以空格隔开
+*/
 package Solutions;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -48,7 +54,7 @@ public class Solutions {
         for(int x=0;x<input_number;x++) {
     	    String input_codes=input.nextLine();
     	    if(input_codes=="") {
-    	    	System.out.println("���`�ɤ��������Ƥ���������");
+    	    	System.out.println("コードを入力してください。");
     	    	input_number++;
     	    	continue;
     	    }
