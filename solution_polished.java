@@ -19,7 +19,7 @@ public class solution_polished {
 			Scanner input = new Scanner(System.in);
 			String number = input.nextLine();
 			int inputNumber = Integer.parseInt(number);
-			for(int x = 0;x < inputNumber;x++) {
+			for(int x = 0; x < inputNumber; x++) {
 			    String inputCodes = input.nextLine();
 			    if(inputCodes == "") {
 				System.out.println("コードを入力してください。");
@@ -27,7 +27,7 @@ public class solution_polished {
 				continue;
 			    }
 			    String[] ans = get_id(inputCodes.split(" "));
-			    for(int ind = 0;ind < ans.length;ind++) {
+			    for(int ind = 0; ind < ans.length; ind++) {
 				if(ind != ans.length-1) {
 					System.out.print(ans[ind] + " ");
 				}
@@ -40,7 +40,7 @@ public class solution_polished {
 	
 		private static int existed_contains(String[] fullList, String s) {
 			int listLength = fullList.length;
-			for (int p = listLength-1;p >= 0;p--) {
+			for (int p = listLength-1; p >= 0; p--) {
 				if(fullList[p].equalsIgnoreCase(s)) {
 					return p;
 				}
@@ -48,7 +48,7 @@ public class solution_polished {
 			return -1;
 		}
 		
-		private static String[] get_id(String [] codes) {
+		private static String[] get_id(String[] codes) {
 			ArrayList<String> existed = new ArrayList<String>();
 			ArrayList<String> ids=new ArrayList<String>();
 			int newId = 1;
@@ -60,10 +60,10 @@ public class solution_polished {
 						ids.add(String.format("%03d", newId));
 						existed.add(code);
 						newId++;
-				}else {
-					ids.add(String.format("%03d", Integer.parseInt(idss[index]) + 100));
-					existed.add(code);
-				}
+					}else {
+						ids.add(String.format("%03d", Integer.parseInt(idss[index]) + 100));
+						existed.add(code);
+					}
 				}else if(index < 0) {
 					ids.add(String.format("%03d", newId));
 					existed.add(code);
