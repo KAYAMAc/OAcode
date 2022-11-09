@@ -1,6 +1,6 @@
 /*
 题目描述:
-将JST标准的日期转换为UTC日期后,找到过去最近的weekday和未来最近的weekday
+将JST标准的日期转换为UTC日期后,找到五天前最近的weekday和五天后最近的weekday
 输入：第一行整数n,后面n行每行一个日期 yyyy-MM-dd HH:mm:ss
 输出：一共n行,每行包括一两个日期,以斜线隔开
 例:
